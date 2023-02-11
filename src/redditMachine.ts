@@ -33,7 +33,7 @@ function invokeFetchSubreddit(context: SubredditContext) {
     .then((json) => json.data.children.map((child: any) => child.data));
 }
 
-export const redditMachince = createMachine<
+export const redditMachine = createMachine<
   SubredditContext,
   SubredditEvents,
   SubredditTypestate

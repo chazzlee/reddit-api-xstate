@@ -1,11 +1,11 @@
 import { useMachine } from "@xstate/react";
 import "./App.css";
-import { redditMachince } from "./redditMachine";
+import { redditMachine } from "./redditMachine";
 
 const subreddits = ["frontend", "reactjs", "vuejs", "laravel"];
 
 function App() {
-  const [current, send] = useMachine(redditMachince);
+  const [current, send] = useMachine(redditMachine);
   const { subreddit, posts } = current.context;
 
   return (
